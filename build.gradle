@@ -1,0 +1,17 @@
+apply plugin : 'application'
+mainClassName = 'demo.HelloGradle'
+
+task task1 << { 
+ println 'Executing Task.............'
+ if(project.hasProperty("args")) {
+    println("Hello "+args)
+} else { 
+    println("Hello World")
+}
+}
+
+//Run task with argument like: gradle -q task1 -Pargs=name  
+//Run task without argument : gradle -q task1
+//we have used gradle2.11
+
+
